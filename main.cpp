@@ -8,10 +8,15 @@ int main() {
     Employee john{"John", "Doe", 5000};
     Employee jane{"Jane", "Doe", 2000};
 
-    john.display();
-    jane.display();
+    cout << "\n\nEmployee Name: " << john.getFirstName() << " " << john.getLastName();
+    cout << "\nAnnual Salary: " << john.getAnnualSalary();
 
-    cout << "\nRaise employee salary by 10%\n";
-    john.displayRaises();
-    jane.displayRaises();
+    cout << "\n\nEmployee Name: " << jane.getFirstName() << " " << jane.getLastName();
+    cout << "\nAnnual Salary: " << jane.getAnnualSalary();
+
+    int raisedSalary = john.getAnnualRaiseSalary(10);
+    cout << "\n\n" << john.getFirstName() << " " << john.getLastName() << " raised salary == " << raisedSalary;
+
+    raisedSalary = jane.getAnnualRaiseSalary(10);
+    cout << "\n\n" << jane.getFirstName() << " " << jane.getLastName() << " raised salary == " << raisedSalary;
 }

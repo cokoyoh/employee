@@ -43,24 +43,11 @@ public:
     }
 
     int getAnnualRaiseSalary(int percentageRaise) {
-        int salary;
-        salary = getMonthlySalary();
-        int raisePerMonth = salary * (percentageRaise / 100);
-        return (raisePerMonth + salary) * 12;
-    }
-
-    void display() {
-        cout << "\n\nEmployee Name: " << getFirstName() << " " << getLastName();
-        cout << "\nAnnual Salary: " << getAnnualSalary();
-    }
-
-    void displayRaises() {
-        cout << "\nEmployee Name: " << getFirstName() << " " << getLastName();
-        cout << "\nAnnual Salary: " << getAnnualRaiseSalary(10);
+       return getAnnualSalary() + (getAnnualSalary() * percentageRaise/100);
     }
 
 private:
     string firstName;
     string lastName;
-    int monthlySalary{0};
+    int monthlySalary;
 };
