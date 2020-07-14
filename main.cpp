@@ -14,9 +14,6 @@ int main() {
     cout << "\n\nEmployee Name: " << jane.getFirstName() << " " << jane.getLastName();
     cout << "\nAnnual Salary: " << jane.getAnnualSalary();
 
-    int raisedSalary = john.getAnnualRaiseSalary(10);
-    cout << "\n\n" << john.getFirstName() << " " << john.getLastName() << " raised salary == " << raisedSalary;
-
-    raisedSalary = jane.getAnnualRaiseSalary(10);
-    cout << "\n\n" << jane.getFirstName() << " " << jane.getLastName() << " raised salary == " << raisedSalary;
+    cout << "\n\n" << john.getFirstName() << " " << john.getLastName() << " annual raised salary: " << john.getAnnualRaiseSalary(10);
+    cout << "\n" << jane.getFirstName() << " " << jane.getLastName() << " annual raised salary: " << jane.getAnnualRaiseSalary(10);
 }
