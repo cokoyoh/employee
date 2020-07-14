@@ -43,7 +43,8 @@ public:
     }
 
     int getAnnualRaiseSalary(int percentageRaise) {
-       return getAnnualSalary() + (getAnnualSalary() * percentageRaise/100);
+        int annualSalary = getAnnualSalary();
+        return annualSalary + (annualSalary * percentageRaise / 100);
     }
 
 private:
